@@ -1,10 +1,10 @@
 FROM golang:latest
 
-RUN mkdir /gt_node_backend
+RUN mkdir /go_videos
 
-COPY . /gt_node_backend/
+COPY . /go_videos/
 
-WORKDIR /gt_node_backend
+WORKDIR /go_videos
 
 RUN go get -d -v ./...
 
@@ -13,4 +13,4 @@ RUN go build
 # Exposing the default port
 EXPOSE 8000
 
-CMD go run /gt_node_backend/main.go
+CMD go run /go_videos/main.go

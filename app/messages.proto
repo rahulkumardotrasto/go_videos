@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message Data {
+  int32 accessToken
+  int32 refreshToken
+}
+
+message GetByBadgeNumberRequest {
+  int32 accessToken
+}
+message UserAuthResponse {
+    int32 statusCode
+    boolean success
+    string message
+    Data data
+}
+
+service AuthService {
+  rpc Authenticate (GetByBadgeNumberRequest) returns (UserAuthResponse)
+}

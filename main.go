@@ -11,7 +11,7 @@ import (
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	var app = app.App{}
-	f, err := os.OpenFile("/tmp/gt_go_backend.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	f, err := os.OpenFile("/tmp/go_videos.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	defer f.Close()
 	if err != nil {
 		log.Fatal("err")
